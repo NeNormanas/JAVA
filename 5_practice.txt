@@ -1,0 +1,107 @@
+package com.company;
+
+import java.lang.reflect.Array;
+
+public class Main {
+
+    public static void main(String[] args) {
+        pirmauzduotis();
+
+
+        int skaitmenys[] = {2, 6, 6, 8, 9, 6};
+        int suma = antrauzduotis(skaitmenys);
+        System.out.println(suma);
+        double atsakymas = treciauzduotis(skaitmenys);
+        System.out.println(atsakymas);
+       int atsakymas1 = ketvirtauzduotis(skaitmenys);
+        System.out.println(atsakymas1);
+
+        // 5 uzduotis
+
+        int masyvas[]={1,2,3,4,5,6,7,8};
+        boolean mMasyvas[]= new boolean[4];
+
+        int pirmas = masyvas[0];
+        int antras = masyvas[1];
+        int trecias = masyvas[2];
+        int ketvirtas = masyvas[3];
+        int penktas = masyvas[4];
+        int sestas = masyvas[5];
+        int septintas = masyvas[6];
+        int astuntas = masyvas[7];
+
+        if (pirmas == antras && trecias == ketvirtas && penktas == sestas && septintas == astuntas ){
+            mMasyvas[0]= true;
+            mMasyvas[1]= true;
+            mMasyvas[2]= true;
+            mMasyvas[3]= true;
+
+
+        }
+        else if (pirmas != antras && trecias != ketvirtas && penktas != sestas && septintas != astuntas){
+            mMasyvas[0]= false;
+            mMasyvas[1]= false;
+            mMasyvas[2]= false;
+            mMasyvas[3]=false;
+
+
+
+        }
+        boolean pirmassantrass = mMasyvas[0];
+        boolean treciasketvirtas = mMasyvas[1];
+        boolean penktassestas = mMasyvas[2];
+        boolean septintasastuntas = mMasyvas[3];
+
+        System.out.println(mMasyvas[0] + " " + mMasyvas[1] + " " + mMasyvas[2] + " " + mMasyvas[3]);
+
+
+
+    }
+
+    // pirma uzduotis
+    public static void pirmauzduotis() {
+        char masyvas[] = {'A', 'B', 'C'};
+
+        char pirmas = masyvas[0];
+        char antras = masyvas[1];
+        char trecia = masyvas[2];
+
+        String rezultatas = String.valueOf(pirmas) + String.valueOf(antras) + String.valueOf(trecia);
+        System.out.println(rezultatas);
+
+    }
+// antra uzduotis
+
+    public static int antrauzduotis(int skaitmenys[]) {
+        int rezultatas = (skaitmenys[0] + skaitmenys[1] + skaitmenys[2] + skaitmenys[3] + skaitmenys[4] + skaitmenys[5]);
+        return rezultatas;
+
+
+    }
+
+    // trecai uzduotis
+    public static double treciauzduotis(int skaitmenys[]) {
+        int suma = antrauzduotis(skaitmenys);
+        double rezultatas2 = ((double)suma/ skaitmenys.length);
+        return rezultatas2;
+
+    }
+    // ketvirtas uzduotis
+    public static int ketvirtauzduotis (int skaitmenys[]){
+    skaitmenys[1]=10;
+    skaitmenys[3]=10;
+    skaitmenys[5]=10;
+    int penktas = skaitmenys [5];
+
+    return penktas;
+
+    }
+    // penkta uzduotis
+    public static void elementupalyginismas(){
+        int skaiciai[] = {1,6,8,9,6,4,8,2};
+        boolean loginesreiksme[]=new boolean[4];
+
+
+    }
+
+}

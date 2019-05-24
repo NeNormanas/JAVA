@@ -1,0 +1,158 @@
+package com.company;
+
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        //pratybos();
+        String zodziumasyvas[] = {"Labas", "Ate", "Kebabas"};
+        int trysmasyvas[] = {1, 5, 9};
+        pirmauzduotis();
+        antrauzduotis();
+        // 3 uzduotis jo masyvas
+        int masyvas[] = {-1, 6, -4, 5, -9};
+        treciauzduotis(masyvas);
+        //ketvirtauzd(zodziumasyvas);
+        sestauzd(trysmasyvas);
+        int kazkas[] = septinta();
+        System.out.println(Arrays.toString(kazkas));
+        astunta(trysmasyvas);
+
+
+    }
+
+    public static void pratybos() {
+        int skaiciai[] = {1, 2, 3, 4, 5};
+        System.out.println(skaiciai[0]);// atspauzdins skaiciu 1;
+
+    }
+
+    // 1 uzduotis
+    public static void pirmauzduotis() {
+        String zodziai[] = {"Labas", "Ate", "Kebabas"};
+        if (zodziai[0].length() > 5) {
+            System.out.println(zodziai[0]);
+        }
+        if (zodziai[1].length() > 5) {
+            System.out.println(zodziai[1]);
+        }
+        if (zodziai[2].length() > 5) {
+            System.out.println(zodziai[2]);
+        }
+    }
+
+    // 2 uzduotis
+    public static void antrauzduotis() {
+        int sveikisk[] = {1, 2, 3, 5};
+        int sandauga = (sveikisk[0] * sveikisk[1] * sveikisk[2] * sveikisk[3]);
+        System.out.println(sandauga);
+    }
+
+    // 3 uzduotis
+    public static void treciauzduotis(int masyvas[]) {
+        if (masyvas[0] < 0) {
+            System.out.print(masyvas[0]);
+        }
+        if (masyvas[1] < 0) {
+            System.out.print(masyvas[1]);
+        }
+        if (masyvas[2] < 0) {
+            System.out.print(masyvas[2]);
+        }
+        if (masyvas[3] < 0) {
+            System.out.print(masyvas[3]);
+        }
+        if (masyvas[4] < 0) {
+            System.out.println(masyvas[4]);
+        }
+    }
+
+    // ketvirta uzduotis
+    public static void ketvirtauzd(String masyvas[]) {
+        System.out.println(masyvas[0].charAt(0));
+        System.out.println(masyvas[1].charAt(0));
+        System.out.println(masyvas[2].charAt(0));
+    }
+
+    // penkta uzduotis
+    public static void penktauzd(int masyvas[]) {
+        masyvas[0] = 0;
+        masyvas[1] = 0;
+        masyvas[2] = 0;
+        masyvas[3] = 0;
+
+    }
+
+    // sesta uzduotis
+    public static int sestauzd(int masyvas[]) {
+
+        if (masyvas[0] > masyvas[1] && masyvas[0] > masyvas[2]) {
+            System.out.println(masyvas[0]);
+            return masyvas[0];
+        } else if (masyvas[1] > masyvas[0] && masyvas[1] > masyvas[2]) {
+            System.out.println(masyvas[1]);
+            return masyvas[1];
+        } else if (masyvas[2] > masyvas[0] && masyvas[2] > masyvas[1]) {
+            System.out.println(masyvas[2]);
+            return masyvas[2];
+        }
+        return 0;
+
+    }
+
+    // septinta uzduotis
+    public static int[] septinta() {
+
+        int masyvas[] = new int[3];
+
+        int pirmas = 6;
+        int antras = 4;
+        int trecias = 8;
+
+        masyvas[0] = pirmas;
+        masyvas[1] = antras;
+        masyvas[2] = trecias;
+
+        return masyvas;
+
+
+    }
+
+    // astunta uzd
+
+    public static void astunta(int masyvas[]) {
+
+        int pirmojo = 0;
+        int pirmojodu = 0;
+        int antrojo = 0;
+        int antrojodu = 0;
+        int treciojo = 0;
+        int treciojodu = 0;
+
+
+        if (masyvas[0] % 2 == 1) {
+            pirmojo = 1;
+        } else {
+            pirmojodu = 1;
+        }
+
+        if (masyvas[1] % 2 == 1) {
+            antrojo = 1;
+
+        } else {
+            antrojodu = 1;
+        }
+        if (masyvas[2] % 2 == 1) {
+            treciojo = 1;
+        } else {
+            treciojodu = 1;
+        }
+        int lyginiai = pirmojodu + antrojodu + treciojodu;
+        int nelyginiai = pirmojo + antrojo + treciojo;
+        System.out.println(lyginiai);
+        System.out.println(nelyginiai);
+
+    }
+}

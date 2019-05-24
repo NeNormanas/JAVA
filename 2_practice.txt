@@ -1,0 +1,138 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// Pirma uzduotis
+        System.out.println("   J    a      v     v  a");
+        System.out.println("   J   a a      v   v  a a");
+        System.out.println("J  J  aaaaa      V V  aaaaa");
+        System.out.println(" JJ  a      a     V  a     a");
+        // antra uzduotis
+        int skaicius = 10;
+        System.out.print(skaicius); System.out.print(" ");  System.out.println(skaicius + 1);
+        // trecia uzduotis
+
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite savo varda:  ");
+        String vardas = skaneris.next();
+        System.out.println("Hello," + "  " + vardas + "!");
+        // trecia uzduotis papildomai
+
+        System.out.println("Iveskite savo varda:  ");
+
+        System.out.println("Hello," + "  " + skaneris.next() + "!");
+
+// Antros paskaitos uzduotys
+
+        //pirma uzduotis
+
+        System.out.println("iveskite du sveikuosius skaicius:  ");
+        int skaicius1 = skaneris.nextInt();
+                int skaicius2 = skaneris.nextInt();
+        System.out.print("Suma ");
+        System.out.println(skaicius1 + skaicius2);
+        System.out.print("skirtumas: ");
+        System.out.println(skaicius1 - skaicius2);
+        System.out.print("sandauga: ");
+        System.out.println(skaicius1 * skaicius2);
+        System.out.print("dalmuo: ");
+        System.out.println(skaicius1 / skaicius2);
+        System.out.print("liekana: ");
+        System.out.println(skaicius1 % skaicius2);
+        //antra uzduotis
+
+
+        System.out.println("Iveskite savo ugi: ");
+        double ugis = skaneris.nextDouble();
+        System.out.println("iveskite savo svori: ");
+        double svoris = skaneris.nextDouble();
+        double KMI = svoris / (ugis * ugis);
+
+        System.out.println("Jusu kuno mases indeksas yra: " + KMI);
+
+
+        //trecia uzduotis
+
+        System.out.println("iveskite savo varda ir pavarde: ");
+        String vardas1 = skaneris.next();
+        String pavarde = skaneris.next();
+
+        String vardas5 = vardas1;
+
+        vardas1 = pavarde;
+
+        pavarde = vardas5;
+
+        System.out.println(pavarde + "   " + vardas1);
+
+
+        //  ketvirta uzduotis
+
+        System.out.println("Iveskite trizenkli skaiciu:  ");
+
+        int trysSkaciukai = skaneris.nextInt();
+
+
+        int pirmasSkaicius = (trysSkaciukai / 100);
+        int antrasSkaicius = ((trysSkaciukai / 10) % 10);
+        int treciasSkaicius = trysSkaciukai % 10;
+
+        System.out.println(pirmasSkaicius + " " + antrasSkaicius + " " + treciasSkaicius);
+
+        int suma = pirmasSkaicius + antrasSkaicius + treciasSkaicius;
+        System.out.println("Trizenklio skaiciaus suma:  " + suma);
+
+        // 5 uzduotis
+
+
+        System.out.println("iveskite keturzenkli skaciu: ");
+        int keturzenklisSkaicius = skaneris.nextInt();
+
+        int sk1 = keturzenklisSkaicius / 1000;
+        int sk2 = ((keturzenklisSkaicius / 100) % 10);
+        int sk3 = ((keturzenklisSkaicius / 10) % 10);
+        int sk4 = keturzenklisSkaicius % 10;
+
+        int apverstassk = sk4 * 1000 + sk3 * 100 + sk2 *10 + sk1;
+
+        System.out.println(apverstassk);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

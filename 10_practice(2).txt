@@ -1,0 +1,178 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // String atsakymas = ketvirtauzduotis(265);
+        //System.out.println(atsakymas);
+
+        //String atsakymas1 = penktauzduotis(250);
+        //System.out.println(atsakymas1);
+        //int atsakymas = sestauzduotis();
+        //System.out.println(atsakymas);
+
+        //String rezultts = septintauzduotis("NORMJ");
+        //System.out.println(rezultts);
+
+        //namudarbai1();
+        //namudabari2(1.23, 1.96);
+        //String vardas = VardoGrazinimas();
+        //System.out.println(vardas);
+        //String numeriai = Automobilionumeriai('H', 'H', 'H', 4, 3, 3);
+        //System.out.println(numeriai);
+
+        String atsakymas = uzduotis();
+        System.out.println(atsakymas);
+    }
+// ketvirta uzduotis
+
+    public static String ketvirtauzduotis(int skaicius) {
+
+        double lyginis = skaicius % 10;
+
+        if (lyginis == 0) {
+
+            String Lyginis = "skaicius yra lyginis";
+
+            return Lyginis;
+
+        } else {
+            String nelyginis = "SKaicius yra nelyginis";
+            return nelyginis;
+
+        }
+
+
+    }
+// penkta uzduotis
+
+    public static String penktauzduotis(int skaicius6) {
+
+        if (skaicius6 == 0 && skaicius6 == 0) {
+
+            String dalijasi = "sakcius dalijasi is 3 ir 5";
+
+            return dalijasi;
+        } else {
+            String nezinau = "Skaicius nesidalija ir is 3 ir is 5 ";
+            return nezinau;
+
+        }
+    }
+    // sesta uzduotis
+
+    public static int sestauzduotis() {
+        System.out.println("Prašome ivesti trizenkli skaiciu:  ");
+        Scanner skaneris = new Scanner(System.in);
+        int ivestasskaicius = skaneris.nextInt();
+
+
+        int pirmasskaicius = ivestasskaicius / 100;
+        int antrasskaicius = ivestasskaicius / 10 % 10;
+        int treciasskaicius = ivestasskaicius % 10;
+
+        if (pirmasskaicius >= antrasskaicius && pirmasskaicius >= treciasskaicius) {
+            return pirmasskaicius;
+        } else if (antrasskaicius >= pirmasskaicius && antrasskaicius >= treciasskaicius) {
+            return antrasskaicius;
+        } else if (treciasskaicius >= pirmasskaicius && treciasskaicius >= antrasskaicius) {
+            return treciasskaicius;
+        } else {
+
+            return 0;
+        }
+    }
+    // septinta uzduotis (is interneto)
+
+    public static String septintauzduotis(String zodis) {
+
+        int pozicisja;
+        int ilgis;
+
+        if (zodis.length() % 2 == 1) {
+            pozicisja = zodis.length() / 2;
+            ilgis = 1;
+
+        } else {
+            pozicisja = zodis.length() / 2 - 1;
+            ilgis = 2;
+        }
+        String rezultatas = zodis.substring(pozicisja, pozicisja + ilgis);
+
+        return rezultatas;
+
+
+    }
+
+// namu darbai 1.
+
+    public static void namudarbai1() {
+        int pirmas = 1;
+        int antras = 2;
+        int trecias = 3;
+
+        int sandauga = pirmas * antras * trecias;
+        System.out.println(sandauga);
+
+    }
+
+    // namu darbai 2.
+    public static void namudabari2(double pirmas, double antras) {
+        double dalyba = pirmas / antras;
+        System.out.println(dalyba);
+    }
+
+    public static String VardoGrazinimas() {
+        String vardas = "Normanas";
+        return vardas; // arba tiesiog return "Noramanas"
+
+
+    }
+    // namu darbai4
+
+    public static String Automobilionumeriai(char pirmas, char antras, char trecias, int nr1, int nr2, int nr3) {
+        String raides = String.valueOf(pirmas + "" + antras + "" + trecias);
+        String numeriai = String.valueOf(nr1 + "" + nr2 + "" + nr3);
+        String bendrinumeriai = raides + numeriai;
+        return bendrinumeriai;
+        // arba retirn String.value.Of(pirmas) + .......
+
+
+    }
+
+    // 7 uzduotis
+    public static String uzduotis() {
+        Scanner klaviatura = new Scanner(System.in);
+        System.out.println("Irasykite bet koki viena zodi: ");
+        String ivedimas = klaviatura.next();
+
+
+        if (ivedimas.length() % 2 == 0) {
+            int ilgis = ivedimas.length();
+            int skaicius;
+            skaicius = ilgis / 2;
+            int skaicius2;
+            skaicius2 = ilgis / 2 - 1;
+
+            char simbolis = ivedimas.charAt(skaicius);
+            char simbolis2 = ivedimas.charAt(skaicius2);
+            String simbolis3 = String.valueOf(simbolis);
+            String simbolis4 = String.valueOf(simbolis2);
+            String simbolis5 = "Viduriniai simboliai yra tokie: " + simbolis4 + "" + simbolis3;
+
+            return simbolis5;
+
+        } else {
+            int ilgis = ivedimas.length();
+            int skaicius;
+            skaicius = ilgis / 2;
+            char simbolis = ivedimas.charAt(skaicius);
+            String simbolis2 = "Vidurinisksaicius yra toks: " + String.valueOf(simbolis);
+
+            return simbolis2;
+
+        }
+    }
+}

@@ -1,0 +1,222 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        atspauzdinimas();
+        int grazintasskaicius = sveikoskgrazinimas(5);
+        int skaicius222 = sveikas2(6);
+        int sumele = suma(6, 9);
+        System.out.println(sumele);
+        String simboliukai = simboliugrazinimas('J', '&');
+        System.out.println(simboliukai);
+        int vidsk = keturzenklis(1234);
+        System.out.println(vidsk);
+        // pirmas();
+        //kalusimas();
+        //skaiciuotuvas();
+       String atsakymas =  uzduotis4(40);
+        System.out.println(atsakymas);
+
+        /*// pirmauzduotis
+        System.out.println("   J    a   v     v   a");
+        System.out.println("   J   a a   v   v   a a");
+        System.out.println("J  J  aaaaa   V V   aaaaa");
+        System.out.println(" JJ  a     a   V   a     a");
+
+
+        //antra uzduotis
+
+        int kintamasis = 2;
+        System.out.print(kintamasis + " ");
+        System.out.println(++kintamasis);
+
+        // trecia uzduotis
+
+        */
+        Scanner skaneris = new Scanner(System.in);
+        /*System.out.println("iveskite savo varda: ");
+        String vardas = skaneris.next();
+        System.out.println("Sveiki, " + vardas);
+// ketvirta uzduotis
+        System.out.println("sveiki, iveskite pirmaji skaiciu: ");
+        int ivestas1skaicius = skaneris.nextInt();
+        System.out.println("iveskite antraji skaiciu");
+        int ivestasantrassk = skaneris.nextInt();
+
+
+        int sudetis = ivestas1skaicius + ivestasantrassk;
+        int atimtis = ivestas1skaicius - ivestasantrassk;
+        int daugyba = ivestas1skaicius * ivestasantrassk;
+        double dalyba = ivestas1skaicius / (double) ivestasantrassk;
+
+        System.out.println("Suma: " + sudetis);
+        System.out.println("Atimtis: " + atimtis);
+        System.out.println("Daugyba: " + daugyba);
+        System.out.println("Dalyba: " + dalyba);
+// kuno manses indeksas
+
+        System.out.println("iveskite savo svori, kg: ");
+        double svoris = skaneris.nextDouble();
+        System.out.println("Iveskite savo ugi, m: ");
+        double ugis = skaneris.nextDouble();
+
+        System.out.println("jusu KMI yra " + svoris / (ugis * ugis));
+
+        // kita uzduotis
+
+        System.out.println("Iveskite savo Varda: ");
+        String vardass = skaneris.next();
+        System.out.println("iveskite savo pavarde: ");
+        String pavarde = skaneris.next();
+        String vardas2 = vardass;
+        vardass = pavarde;
+
+
+
+
+        System.out.println(vardass + " " + vardas2);
+
+        // kita uzduotis
+
+        System.out.println("iveskite trizenkli skaiciu: ");
+        int trizenklis = skaneris.nextInt();
+        int pirukas = trizenklis /100;
+        int antrukas = trizenklis / 10 % 10 ;
+        int treciukas = trizenklis % 10;
+
+        System.out.println(pirukas+antrukas+treciukas);
+
+// kita uzduotis
+
+        System.out.println("Iveskite ketzenkli skaiciu: ");
+        int keturzenklis = skaneris.nextInt();
+        int p1 = keturzenklis / 1000;
+        int p2 = keturzenklis / 100 % 10;
+        int p3 = keturzenklis / 10 % 10;
+        int p4 = keturzenklis % 10;
+
+        System.out.println(p4 * 1000 + p3 * 100 + p2 * 10 + p1);*/
+
+
+    }
+
+    public static void atspauzdinimas() {
+        System.out.println("Hello world");
+    }
+
+    public static int sveikoskgrazinimas(int skaicius) {
+        return skaicius;
+
+    }
+
+    public static int sveikas2(int skacius) {
+        System.out.println(skacius);
+        return skacius;
+
+    }
+
+    public static int suma(int pirmas, int antras) {
+        int sumaa = pirmas + antras;
+        return sumaa;
+
+    }
+
+    public static String simboliugrazinimas(char pirmas, char antras) {
+        String konversija = String.valueOf(pirmas + "" + antras);
+        return konversija;
+
+    }
+
+    public static boolean reiksme() {
+        return true;
+
+    }
+
+    public static int keturzenklis(int skaicius) {
+        int viduriniai = skaicius / 10 % 100;
+
+        return viduriniai;
+
+    }
+
+    public static void pirmas() {
+        System.out.println("Iveskite nuo 0 iki 5: ");
+        Scanner skaneris = new Scanner(System.in);
+        int skaicius = skaneris.nextInt();
+
+        if (skaicius >= 0 && skaicius <= 5) {
+            System.out.println(skaicius);
+        } else {
+            System.out.println("bad input");
+        }
+    }
+
+    public static void kalusimas() {
+        System.out.println("Kiek menesiu yra metuose?");
+        System.out.println("5");
+        System.out.println("7");
+        System.out.println("12");
+        System.out.println("24");
+
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Atsakymas(skaicius arba skaiciai): ");
+        int atsakymas = skaneris.nextInt();
+
+        if (atsakymas == 12) {
+            System.out.println("Teisingai");
+        } else {
+            System.out.println("Neteisingai");
+        }
+
+    }
+    public static void skaiciuotuvas (){
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite pirmaji skaiciu : ");
+        int pirmas = skaneris.nextInt();
+        System.out.println("Iveskite antraji skaiciu: ");
+        int antras = skaneris.nextInt();
+        System.out.println("Pasirinkite norimo veiksmo nr.: ");
+        System.out.println("1.Suma");
+        System.out.println("2.Atimtis");
+        System.out.println("3.Daugyba");
+        System.out.println("4.Dalyba");
+        System.out.print("Jusu pasirinkimo nr.: ");
+        int pasirinkimas = skaneris.nextInt();
+
+        if (pasirinkimas == 1){
+            int suma = pirmas + antras;
+            System.out.println("Atsakymas: " + suma);
+
+        }
+        else if (pasirinkimas == 2){
+            int atimtis = pirmas - antras;
+            System.out.println("Atsakymas: " + atimtis);
+        }
+        else if (pasirinkimas == 3){
+            int daugyba = pirmas * antras;
+            System.out.println("Atsakymas: " + daugyba);
+        }
+        else if (pasirinkimas == 4){
+            int dalyba = pirmas / antras;
+            System.out.println("Atsakymas: " + dalyba);
+        }
+        else {
+            System.out.println("Klaidingas pasirinkimas");
+        }
+
+    }
+    public static String uzduotis4 (int skaicius){
+        if (skaicius % 2 == 0){
+            String atsakymas = "Skaicius Lyginis";
+        return atsakymas; }
+        else {
+            String atsakymas = "Skaicius NELyginis";
+            return atsakymas;}
+
+    }
+
+
+}

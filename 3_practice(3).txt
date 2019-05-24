@@ -1,0 +1,90 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        int Skaicius = 10;
+        int Skaicius2 = 7;
+        double pakeitimas = (double)Skaicius;
+
+        double skirtumas = (double)Skaicius / Skaicius2;
+        System.out.println(skirtumas);
+
+        String teksastas = "55";
+        int naujas = Integer.parseInt(teksastas);
+        System.out.println(naujas);
+
+        double naujass = Double.parseDouble(teksastas);
+        System.out.println(naujass);
+
+
+
+
+
+        uzrasymo();
+        uzrasymo();
+
+       int skaiciuks =  grazinimas(10);
+        System.out.println(skaiciuks);
+
+        grazinimas2(15);
+        sumele(5,3);
+
+
+
+    simboliai('G', 'D');
+    boleanreiksme();
+        System.out.println(boleanreiksme());
+
+
+        final String keturzenklis = keturzenklis(3621);
+        System.out.println(keturzenklis);
+
+
+    }
+    public static void uzrasymo() {
+        System.out.println("Sveikas pasauli");}
+
+        public static int grazinimas(int skaicius) {
+        return skaicius;
+
+        }
+    public static int grazinimas2 (int skaicius2) {
+        System.out.println(skaicius2);
+        return skaicius2;
+
+    }
+    public static int sumele (int pirmas, int antras) {
+        int suma = pirmas + antras;
+        System.out.println(suma);
+        return suma;
+
+    }
+    public static String simboliai (char pirmasis, char antrasis) {
+    String simbolis1 = String.valueOf(pirmasis);
+    String sibolis2 = String.valueOf(antrasis);
+    String suma = simbolis1 + sibolis2;
+        System.out.println(suma);
+    return suma;
+
+    }
+    public static boolean boleanreiksme(){
+        return true;
+
+}
+    public static String keturzenklis (int pirms){
+
+        int pirmasskaiciuks = pirms / 100 % 10;
+        int antrsskaiciuks  = pirms / 10 % 10;
+        String pirmas = String.valueOf(pirmasskaiciuks);
+        String antras = String.valueOf(antrsskaiciuks);
+        String paavizdavimas = pirmas + antras;
+        System.out.println(paavizdavimas);
+
+        return paavizdavimas;
+
+
+
+    }
+}

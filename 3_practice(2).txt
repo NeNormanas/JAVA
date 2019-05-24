@@ -1,0 +1,41 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        atspauzdinkteksta();
+
+        apskaiciuoksandauga(5,2);
+        apskaiciuoksandauga(6,6);
+
+        int rezultatas = apskaiciuokskirtuma(10,2);
+        System.out.println(rezultatas);
+
+    }
+     public static void atspauzdinkteksta() {
+
+        System.out.println("Hello WOrld");
+        System.out.println("Bandome funkcija");
+        System.out.println("pabaiga");
+
+    }
+
+    public static void apskaiciuoksandauga(int pirmasSk, int antrasSk){
+        int sandauga = pirmasSk * antrasSk;
+        System.out.println("skaiciu sandauga: " + sandauga);
+
+    }
+
+    // kai funkcija kazka grazina
+
+    public static int apskaiciuokskirtuma(int pirmassk, int antrassk) {
+        int skirtumas = pirmassk - antrassk;
+
+        return skirtumas;
+
+
+
+
+    }
+}

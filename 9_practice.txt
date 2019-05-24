@@ -1,0 +1,121 @@
+package com.company;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        //pirmasuzdavinys();
+        //antrasuzdavinys();
+        treciauzduotis();
+        //ketvirtauzduotis();
+        //penktauzduotis();
+        //sestauzduotis();
+
+
+    }
+
+    public static void pirmasuzdavinys() {
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite sveikaji skaiciu");
+        int ivestasSk = skaneris.nextInt();
+        for (int i = 0; i < ivestasSk; i++) {
+            System.out.println("Hello World");
+        }
+
+    }
+
+    public static void antrasuzdavinys() {
+
+
+        for (int i = 100; i < 1000; i++) {// i atspindes kiekviena skaiciu nuo 100 iki 1000
+            int pirmas = i / 100;
+            int antras = i / 10 % 10;
+            int trecias = i % 10;
+
+            int skaiciai = pirmas * pirmas * pirmas + antras * antras * antras + trecias * trecias * trecias;
+
+            if (skaiciai == i) {
+                System.out.println(skaiciai);
+
+            }
+        }
+    }
+
+    public static void treciauzduotis() {
+
+        for (int i = 1; i <= 5; i++) {
+
+
+            for (int j = 1; j <= 5; j++) {
+                int rezulatas = i * j;
+
+                System.out.println(i + ""+ "*" + j + "" + "=" +  rezulatas);
+            }
+        }
+
+
+    }
+
+    public static void ketvirtauzduotis() {
+
+        Scanner skaneris = new Scanner(System.in);
+
+        int skaicius = -1;
+        int suma = 0;
+
+        while (skaicius != 0) {
+
+            System.out.println("Veskite skaicius");
+            skaicius = skaneris.nextInt();
+            suma = suma + skaicius;
+
+
+        }
+        System.out.println(suma);
+    }
+
+    public static void penktauzduotis() {
+        System.out.println("Kiek skaiciu ketinate ivesti? ");
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("AS ivesiu (nurodyti skaiciu): ");
+        int skaicius = skaneris.nextInt();
+        int masyvas[] = new int[skaicius];
+
+
+        for (int i = 0; i < skaicius; i++) {
+            System.out.println("Iveskite norima skaiciu");
+            masyvas[i] = skaneris.nextInt();
+
+        }
+
+        for (int j:masyvas){
+            if (j>100){
+                System.out.println(j +" " +  "   : Šis skaicius yra didesnis už 100");
+            }
+        }
+    }
+
+    public static void sestauzduotis(){
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite du sveikuosius skaicius:  ");
+        int X = skaneris.nextInt();
+        int Y = skaneris.nextInt();
+        int pirmoskaiciauszenklas = 1;
+        int antroskaiciauszenklas = 1;
+        int rezultatas = 0;
+
+        for (int i = 0; i <Y; i++){
+            rezultatas = rezultatas + X;
+
+
+        }
+        System.out.println(rezultatas);
+    }
+
+
+}
+
+

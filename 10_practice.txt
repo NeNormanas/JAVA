@@ -1,0 +1,103 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        //pirmauzduotis();
+        //antrauzduotis();
+        //treciauzduotos("Normanas", 5);
+        //double atsakymas = ketvirtauzduotis();
+        //System.out.println(atsakymas);
+        //int masyvas [] = {1,2,3,4,5,6};
+        //int atsakymas = penktauzduotis (masyvas);
+        //System.out.println(atsakymas);
+
+        sestauzduotis("labas labas labas labas");
+
+
+    }
+
+    public static void pirmauzduotis() {
+        double pirmasSk = 12;
+        double antrasSk = 7;
+
+        double pirmasisantro = pirmasSk / antrasSk;
+        double antrasispirmo = antrasSk / pirmasSk;
+
+        System.out.println(pirmasisantro);
+        System.out.println(antrasispirmo);
+    }
+
+    public static void antrauzduotis() {
+        System.out.println("Iveskite Knygos pavadinima:  ");
+        Scanner skaneris = new Scanner(System.in);
+        String pavadinimas = skaneris.next();
+        System.out.println("Iveskite Knygos Autoriu:  ");
+        String autorius = skaneris.next();
+        System.out.println("Iveskite isleidimo metus:  ");
+        int metai = skaneris.nextInt();
+
+        System.out.println(pavadinimas + autorius + metai);
+    }
+
+    public static void treciauzduotos(String zodis, int skaicius) {
+        for (int i = 1; i <= skaicius; i++) {
+            System.out.println(zodis);
+        }
+
+    }
+
+    public static double ketvirtauzduotis() {
+
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite pirma skaiciu: ");
+        double kintamasis1 = skaneris.nextInt();
+        System.out.println("Iveskite antra skaiciu: ");
+        double kintamasis2 = skaneris.nextInt();
+        System.out.println("Iveskite antra skaiciu: ");
+        double kintamasis3 = skaneris.nextInt();
+
+        double sandauga = kintamasis1 * kintamasis2 * kintamasis3;
+
+        return sandauga;
+
+    }
+
+    public static int penktauzduotis(int masyvas[]) {
+
+        int suma = 0;
+
+        for (int i = 0; i < masyvas.length; i++) {
+            if (i % 2 == 0) {
+                suma = suma + masyvas[i];
+            }
+        }
+        return suma;
+    }
+
+    public static void sestauzduotis(String zodis) {
+        boolean contains;
+        int suma = 0;
+        if (contains = zodis.contains("ab")) {
+
+
+            for (int i = 0; i < zodis.length(); i++) {
+                if (zodis.charAt(i) == 'a' || zodis.charAt(i++) == 'b') {
+                    suma = suma + 1;
+                }
+
+            }
+        }
+        System.out.println(suma);
+    }
+}
+
+
+
+
+
+
+
+

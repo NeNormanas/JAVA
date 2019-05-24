@@ -1,0 +1,102 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        String vidurkis = pirmauzduotis(8, 6, 3, 4, 8);
+        System.out.println(vidurkis);
+        double rezultatas = vidurkioskaiciuokle(69874);
+        System.out.println(rezultatas);
+        treciauzduotis();
+        ketvirtauzd();
+    }
+
+
+    //Pirma uzduotis
+
+    public static String pirmauzduotis(int pirmas, int antras, int trecias, int ketvirtas, int penktas) {
+        double vidurkis = (double) (pirmas + antras + trecias + ketvirtas + penktas) / 5;
+        if (vidurkis < 5) {
+            return "Nepatenkinamai";
+        } else if (vidurkis >= 5 && vidurkis <= 7) {
+            return "Patenkinimai";
+        } else {
+            return "Labai gerai";
+        }
+    }
+
+    //Antra uzduotis
+
+    public static double vidurkioskaiciuokle(int penkiazenklis) {
+        int pirmasSK = penkiazenklis / 10000;
+        int antrasSK = penkiazenklis / 1000 % 10;
+        int treciasSK = penkiazenklis / 100 % 10;
+        int ketvirtasSK = penkiazenklis / 10 % 10;
+        int penktasSK = penkiazenklis % 10;
+
+        double vidurkis = (double) (pirmasSK + antrasSK + treciasSK + ketvirtasSK + penktasSK) / 5;
+        return vidurkis;
+
+    }
+
+    //Trecia uzduotis
+    public static void treciauzduotis() {
+
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite metus: ");
+
+        int ivestassk = skaneris.nextInt();
+        int pirmiejimetai = 1896;
+
+
+        if ((ivestassk - pirmiejimetai) % 4 == 0 && ivestassk >= 1896) {
+            int numeris = (ivestassk - pirmiejimetai) / 4 + 1;
+            System.out.println("Metai yra olimpiniai");
+            System.out.println("Olimpiniu metu nr yra: " + numeris);
+
+
+        } else {
+            System.out.println("Neolimpiniai metai");
+        }
+
+
+    }
+    // ketvirta uzduotis
+
+    public static void ketvirtauzd() {
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskite trizenkli skaiciu: ");
+        int ivestassk = skaneris.nextInt();
+        int pirmas = ivestassk / 100;
+        int antras = ivestassk / 10 % 10;
+        int trecias = ivestassk % 10;
+
+
+        int pakeltassk = (pirmas * pirmas * pirmas) + (antras * antras * antras) + (trecias * trecias * trecias);
+
+        if (ivestassk == pakeltassk) {
+            System.out.println("Taip Armstrongo skaicius");
+        }
+        else {
+            System.out.println("tai nera Armstrongo skaicius");
+        }
+
+    }
+    // penkta uzduotis
+    // pvz turime int n= 1234;
+    //turime isskaidyti ir paimti piemaji skaiciu su ketvirtu
+    //poto sukeisti antra su treciu
+
+    //Sestoji
+    //susikuriam int h1 = 12
+    //tada int min1 = 59; poto susikuriam h2 ir min2 reiks atlikti aritmetinius veiksmus kad galetum atimineti laiak
+    // turi suveikti ir su pradejimo laikas 13:00 ir pabaiga 12:59
+
+    // septinta duota int litai = 12 (kuo maziau monetu sunaudota) 5*2 ir2*1 ir 1*0
+    //astuntas 0 dega zalia 1 dega zalia 2 dega zalia trecia dega raudona, bus kazkas su intervalais 5 bus tikrai
+    //
+
+}

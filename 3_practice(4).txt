@@ -1,0 +1,88 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        atspauzdinimofunkcija();
+
+       int sveiaksis =  sveikoskaiciau(10);
+
+        System.out.println(sveiaksis);
+
+       int skaiciukas =  funkcijanr3(26);
+
+       int suma = dviejuskaiciugrazinimas(5,3);
+
+        System.out.println(suma);
+
+        String simboliukas = simboliugrazinimas('D','Y');
+
+        System.out.println(simboliukas);
+
+        int skaicius = keturzenklis(3,6,2,1);
+        System.out.println(skaicius);
+
+
+
+
+
+    }
+// pirma uzduotis
+
+    public static void atspauzdinimofunkcija() {
+
+            System.out.println("Hello world");
+
+        }
+        // antra uzduotis
+
+    public static int sveikoskaiciau(int skaicius){
+        return skaicius;
+
+    }
+
+    //trecia uzduotis
+
+    public static int funkcijanr3(int skicius1){
+
+        System.out.println(skicius1);
+        return skicius1;
+
+    }
+    // ketvirta uzduotis
+
+    public static int dviejuskaiciugrazinimas (int skaicius, int skaicius2){
+    int suma = skaicius + skaicius2;
+    return suma;
+
+    }
+  // penkta uzduotis
+
+    public static String simboliugrazinimas(char pirmas, char antras) {
+
+        String simbolis1 = String.valueOf(pirmas);
+        String simbolis2 = String.valueOf(antras);
+        String suma = simbolis1 + simbolis2;
+        return suma;
+
+
+    }
+
+    // sesta uzduotis
+
+    public static boolean tiesanetiesa(){
+        boolean atsakymas = true;
+        return atsakymas;
+
+
+    }
+// septinta uzduotis
+
+    public static int keturzenklis(int vienas, int du, int treciastrys, int ketvirt){
+        int pirmasantras = ketvirt , du;
+
+        return pirmasantras;
+
+}
+}

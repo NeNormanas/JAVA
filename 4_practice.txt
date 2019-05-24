@@ -1,0 +1,49 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+//labas();
+    }
+
+    public static void ifpavyzdys() {
+        int pirm = 5;
+        int antr = 3;
+        int trec = 8;
+
+        if (pirm < antr) {
+            System.out.println("pirmas skaicius yra mazesnis uz antra");
+        } else if (antr < pirm)
+            System.out.println("antras skaicius yra mazesnis uz pirma");
+        else {
+            System.out.println("skaiciai yra lygus");
+        }
+    }
+
+    public static void ifpavuzdys2() {
+        int pirm = 5;
+        int antr = 3;
+        int trec = 8;
+        if (pirm > antr && pirm > trec) {
+            System.out.println("pirmas skaicius yra didziausias");
+            if (pirm > antr || pirm > antr) {
+                System.out.println("pirmas skaicius yra didesnis uz kazkuri is kitu ");
+            }
+        }
+    }
+
+    public static void labas() {
+        String tekstas = "labas";
+        char treciasSimbolis = tekstas.charAt(2);
+        int ilgisteksto = tekstas.length();
+        System.out.println(treciasSimbolis);
+        System.out.println(ilgisteksto);
+
+    }
+
+
+
+
+    }
+

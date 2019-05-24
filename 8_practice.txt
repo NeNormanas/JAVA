@@ -1,0 +1,112 @@
+package com.company;
+
+import javafx.scene.transform.Scale;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        //PVZ ciklo
+        //ciklas();
+        //pirmauzduotis();
+        antrauzduotis();
+
+        //treciauzduotis();
+        //ketvirtauzduotis();
+        //penktauzduotis();
+        sestauzduotis();
+
+    }
+
+    public static void ciklas() {
+        for (int i = 0; i < 5; i++) {// atspauzdins penkis kartus
+            System.out.println("Hello world");
+        }
+    }
+    // uzdaviniu sprendimai
+
+    // Pirma uzduotis
+
+    public static void pirmauzduotis() {
+        int i = 0;
+        for (i = 1; i < 1001; i++) {
+            System.out.println(i);
+        }
+    }
+
+    // Antra uzduotis
+    public static void antrauzduotis() {
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskites sveikaji skaiciu: ");
+        int ivestassk = skaneris.nextInt();
+
+        int suma = 0;// susikuriame pries cikla
+
+        for (int i = 0; i <= ivestassk; i++) {
+            suma = i + suma;
+        }
+        System.out.println("skaiciu suma: " + suma);
+    }
+
+
+    public static void treciauzduotis() {
+
+
+        for (int i = 0; i <= 18; i++) {
+
+            int miegojimolaikas = 8 + (18 - i) / 2;
+
+
+            System.out.println("Jeigu Jusu amzius: " + i + "   " + "Miegojimo trukme: " + miegojimolaikas);
+        }
+
+    }
+
+    public static void ketvirtauzduotis() {
+        int mayvas[] = {1, 5, -9, -8, 5};
+        int suma = 0;
+        for (int kintamieji : mayvas) {
+            if (kintamieji > 0) {
+                suma = suma + kintamieji;
+
+            }
+        }
+        System.out.println(suma);
+    }
+    public static void penktauzduotis() {
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskites sveikaji skaiciu nuo -999 iki 999: ");
+        int skaicius = skaneris.nextInt();
+        int eilesnr = 0;
+
+        for (int i = -999; i <= skaicius; i++) {
+            eilesnr++;
+        }
+        if (skaicius >= 0) {
+            System.out.println("Skaicius teigiamas");
+
+        } else {
+            System.out.println("Neigiamas");
+
+        }
+        System.out.println("Eiles nr:" + eilesnr);
+    }
+
+    public static void sestauzduotis(){
+        Scanner skaneris = new Scanner(System.in);
+        System.out.println("Iveskites sveikaji skaiciu : ");
+        int skaicius = skaneris.nextInt();
+        int sekosnarys = 3;
+        int skirtumas = 0;
+
+        for (int i = 1; i < skaicius; i++){
+
+            sekosnarys = skirtumas + sekosnarys;
+            System.out.println(sekosnarys);
+            skirtumas = skirtumas + 2;
+        }
+
+    }
+    }

@@ -1,0 +1,31 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+/*	String tekstas = "55";
+	int skaicius = Integer.parseInt(tekstas);
+
+        System.out.println("konvertuotas skaicius: " + skaicius);
+
+        String desimtainis = "12.3";
+        double desimtas = Double.parseDouble(desimtainis);
+        System.out.println("skaicius" + desimtas);
+
+
+        // konvertavimas i string
+
+        int pirmassk = 5;
+        char simbolis = 'C';
+
+        String sujungimas = String.valueOf(pirmassk) + String.valueOf(simbolis);
+
+        System.out.println(sujungimas);*/
+
+
+//Metodai arba funkcijos
+
+
+
+    }
+}
